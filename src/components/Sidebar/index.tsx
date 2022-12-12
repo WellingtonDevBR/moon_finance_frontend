@@ -2,9 +2,12 @@ import { Container, HamburguerContainer, HeaderContainer, NavigationContainer } 
 import logo from '../../assets/logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 
 export function Sidebar() {
+
   return (
     <Container>
       <HeaderContainer>
@@ -14,15 +17,15 @@ export function Sidebar() {
         </HamburguerContainer>    
       </HeaderContainer>
       <NavigationContainer>
-        <a className="active" href="#">Dashboard</a>
-        <a href="#">Customer</a>
-        <a href="#">Supplier</a>
-        <a href="#">Product</a>
-        <a href="#">Region</a>
-        <a href="#">Platform</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Order</a>
-        <a href="#">Stock</a>
+        <NavLink to={'/dashboard'}>Dashboard</NavLink>
+        <NavLink to={'/customer'}>Customer</NavLink>
+        <NavLink to={'/supplier'}>Supplier</NavLink>
+        <NavLink to={'/product'}>Product</NavLink>
+        <NavLink to={'/region'}>Region</NavLink>
+        <NavLink to={'/platform'}>Platform</NavLink>
+        <NavLink to={'/marketplace'}>Marketplace</NavLink>
+        <NavLink to={'/order'}>Order</NavLink>
+        <NavLink to={'/stock'}>Stock</NavLink>
       </NavigationContainer>
     </Container>
   )

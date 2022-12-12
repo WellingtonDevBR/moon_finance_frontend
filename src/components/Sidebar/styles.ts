@@ -6,12 +6,13 @@ export const Container = styled.div`
     flex-direction: column;
     position: absolute;
     left: 0;
+    top: 0;
     width: 16.25rem;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #0D0D0F;
     height: 100%;
     gap: 1rem;
-    z-index: 1;
+    z-index: 2;
 `;
 
 export const HeaderContainer = styled.header`
@@ -34,7 +35,7 @@ export const HamburguerContainer = styled.div`
     position: absolute;
     right: 0;
     top: 0;
-    margin: 1rem -2rem;
+    margin: 2rem -2rem;
     cursor: pointer;
 `
 export const NavigationContainer = styled.nav`
