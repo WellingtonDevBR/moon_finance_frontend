@@ -27,6 +27,11 @@ export const Container = styled.div`
             color: #FFF;
         }
     }
+
+    svg {
+        cursor: pointer;
+        margin: 0 1.875rem;
+    }
 `
 
 export const InputSection = styled.section`

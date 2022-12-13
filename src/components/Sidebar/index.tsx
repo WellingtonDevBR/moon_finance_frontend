@@ -3,16 +3,20 @@ import logo from '../../assets/logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+
+interface HeaderProps {
+  isSiderBarOpen: boolean;
+  onHandleSideBar: () => void;
+}
 
 
-export function Sidebar() {
+export function Sidebar({ isSiderBarOpen, onHandleSideBar }: HeaderProps) {
 
   return (
-    <Container>
+    <Container open={isSiderBarOpen}>
       <HeaderContainer>
         <span><img src={logo} alt="ig.news" />MOON FINANCE</span>    
-        <HamburguerContainer>
+        <HamburguerContainer onClick={onHandleSideBar}>
           <FontAwesomeIcon icon={faBars} fontSize={24} color={'#E0E0E0'}/>
         </HamburguerContainer>    
       </HeaderContainer>

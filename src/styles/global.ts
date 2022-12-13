@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import ProductSansRegular from "../fonts/product-sans/ProductSansRegular.ttf";
 import ProductSansBold from "../fonts/product-sans/ProductSansBold.ttf";
+import ProductSansItalic from "../fonts/product-sans/ProductSansItalic.ttf";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -13,9 +14,16 @@ export const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: 'Product sans bold';
-        font-style: normal;
+        font-style: bold;
         font-weight: 700;
         src: url(${ProductSansBold});
+    }
+
+    @font-face {
+        font-family: 'Product sans italic';
+        font-style: italic;
+        font-weight: 300;
+        src: url(${ProductSansItalic});
     }
 
     * {

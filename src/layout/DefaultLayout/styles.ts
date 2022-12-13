@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
+interface ContainerProps {
+    open: boolean;
+}
+export const Container = styled.main<ContainerProps>`
     display: flex;
-    padding: 100px 300px;
-
-    
+    padding: ${({ open }) => open ? '100px 300px' : '100px 100px'};
 `

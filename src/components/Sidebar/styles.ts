@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+interface HamburguerProps {
+    open: boolean;
+}
 
-export const Container = styled.div`
-    display: flex;
+export const Container = styled.div<HamburguerProps>`
+    display: ${({ open }) => open ? 'flex' : 'none'};
     flex-direction: column;
     position: absolute;
     left: 0;
@@ -16,6 +19,7 @@ export const Container = styled.div`
 `;
 
 export const HeaderContainer = styled.header`
+    display: flex;
     width: 100%;
     span {
         cursor: pointer;

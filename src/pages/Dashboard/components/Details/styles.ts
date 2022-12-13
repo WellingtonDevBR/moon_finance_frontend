@@ -14,9 +14,6 @@ export const FooterItem = styled.div`
     padding: 0.875rem;
     display: flex;
     flex-direction: column;
-    height: {
-        
-    }
     background: linear-gradient(145.71deg, rgba(97, 92, 101, 0.2) 5.51%, rgba(97, 92, 101, 0.2) 56%, rgba(97, 92, 101, 0.2) 99.63%);
     header {
         display: flex;
